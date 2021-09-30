@@ -14,6 +14,7 @@ do {
             operadorValido=true;
         } else {
             alert("Operacion no reconocida");
+            operadorValido=false;
         }    
     } while (!operadorValido);
 
