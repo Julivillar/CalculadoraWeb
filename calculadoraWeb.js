@@ -5,11 +5,13 @@ let operadorValido=false;
 let sonNumeros=false;
 let operacion;
 let numeros;
-let num1;
-let num2;
+let num1=null;
+let num2=null;
 do {
+
     do {
         operacion= prompt("Seleccione la operacion: +, -, *, /");
+        operacion=operacion.replace(/\s+/g, '');
         if (operacion=="+" || operacion=="-" || operacion=="*" || operacion=="/") {
             operadorValido=true;
         } else {
@@ -19,11 +21,19 @@ do {
     } while (!operadorValido);
 
     do {
+        num1 =null;
+        num2 =null;
         numeros = prompt("Introduzca 2 numeros separados por un espacio");
-        numeros = numeros.split(" ", 2);
-        if (!isNaN(parseInt(numeros[0])) && !isNaN(parseInt(numeros[1]))) {
-            num1= parseInt(numeros[0]);
-            num2= parseInt(numeros[1]);
+        numeros=numeros.split(" ");
+        //alert(numeros);
+        numeros=numeros.filter(Number);
+        //alert(numeros);
+        num1=numeros[0];
+        num2=numeros[1];
+
+        if (!isNaN(Number(num1)) || !isNaN(Number(num2))) {
+            num1=Number(num1);
+            num2=Number(num2);
             sonNumeros=true;
         }else{
             alert("Tienes que introducir numeros")
