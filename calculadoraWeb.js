@@ -25,20 +25,36 @@ do {
         num2 =null;
         numeros = prompt("Introduzca 2 numeros separados por un espacio");
         numeros=numeros.split(" ");
-        //alert(numeros);
+        /*alert(numeros);
         numeros=numeros.filter(Number);
-        //alert(numeros);
+        alert(numeros);
         num1=numeros[0];
         num2=numeros[1];
-
-        if (!isNaN(Number(num1)) || !isNaN(Number(num2))) {
-            num1=Number(num1);
-            num2=Number(num2);
-            sonNumeros=true;
+        alert(num1 + " "+ num2);*/
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i]!=="") {
+                if (num1==null) {
+                    num1=numeros[i]; 
+                }else if(num2==null){
+                    num2=numeros[i];
+                }
+            }  
+        }
+        if (!isNaN(Number(num1)) && !isNaN(Number(num2))) {
+            if (num1==null || num2==null) {
+                sonNumeros=false;
+            }else{
+                num1=Number(num1);
+                num2=Number(num2);
+                sonNumeros=true;
+            } 
         }else{
+            num1=null;
+            num2=null;
             alert("Tienes que introducir numeros")
             sonNumeros=false;
-        }    
+        }
+            
     } while (!sonNumeros);
     
     switch (operacion) {
