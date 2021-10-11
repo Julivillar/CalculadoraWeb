@@ -25,12 +25,7 @@ do {
         num2 =null;
         numeros = prompt("Introduzca 2 numeros separados por un espacio");
         numeros=numeros.split(" ");
-        /*alert(numeros);
-        numeros=numeros.filter(Number);
-        alert(numeros);
-        num1=numeros[0];
-        num2=numeros[1];
-        alert(num1 + " "+ num2);*/
+
         for (let i = 0; i < numeros.length; i++) {
             if (numeros[i]!=="") {
                 if (num1==null) {
