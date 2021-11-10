@@ -1,0 +1,53 @@
+calculadora.resta = function (operadores){
+    if (operadores[0] === 'R') {
+        lastResult = this.lastResult - Number(operadores[1]);
+    } else if (operadores[1] === 'R') {
+        lastResult = Number(operadores[0]) - this.lastResult;
+    } else {
+        lastResult = Number(operadores[0]) - Number(operadores[1]);
+    }
+    alert(lastResult);
+    return lastResult;
+}
+
+
+
+
+
+
+resta = (operadores, lastResult) => {
+        if (operadores[0] === 'R') {
+            lastResult = this.lastResult - Number(operadores[1]);
+        } else if (operadores[1] === 'R') {
+            lastResult = Number(operadores[0]) - this.lastResult;
+        } else {
+            lastResult = Number(operadores[0]) - Number(operadores[1]);
+        }
+        alert(lastResult);
+        return lastResult;
+    },
+
+    multiplicar = (operadores, lastResult) => {
+        if (operadores[0] === 'R') {
+            lastResult = this.lastResult * Number(operadores[1]);
+        } else if (operadores[1] === 'R') {
+            lastResult = Number(operadores[0]) * this.lastResult;
+        } else {
+            lastResult = Number(operadores[0]) * Number(operadores[1]);
+        }
+        alert(lastResult);
+        return lastResult;
+
+    },
+
+    dividir = (operadores, lastResult) => {
+        if (operadores[0] === 'R' && Number(operadores[1]) != 0) {
+            lastResult = this.lastResult / Number(operadores[1]);
+        } else if (operadores[1] === 'R' && lastResult != 0) {
+            lastResult = Number(operadores[0]) / this.lastResult;
+        } else if (Number(operadores[1]) != 0) {
+            lastResult = Number(operadores[0]) / Number(operadores[1]);
+        }
+        alert(lastResult);
+        return lastResult;
+    },

@@ -1,0 +1,9 @@
+class Calculadora{
+    constructor( operacion, numeros){
+        this.operacion = pedirOperacion();
+        this.numeros = pedirNumeros();
+    }
+    suma( operacion, numeros){
+        return numeros[0] + numeros[1];
+    }
+}
